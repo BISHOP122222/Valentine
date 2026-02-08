@@ -1,5 +1,5 @@
 // CONFIGURATION: Replace with your actual email address!
-const yourEmail = "milanjohnso09@gmail.com";
+const yourEmail = "roddynasiima23@gmail.com";
 
 const yesBtn = document.getElementById('yes-btn');
 const noBtn = document.getElementById('no-btn');
