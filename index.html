@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Will You Be My Valentine? 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
     <!-- Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="heart-container">
-            <div class="heart"></div>
-        </div>
-        <h1 id="question">Will you be my Valentine? 💖</h1>
-        <p id="subtext">Please say yes! 🥺</p>
-        
-        <div class="buttons">
-            <button id="yes-btn">Yes! 🥰</button>
-            <button id="no-btn">No 😢</button>
-        </div>
 
-        <div id="hidden-message" class="hidden">
-            <h1>Yay!!! I love you so much! ❤️❤️❤️</h1>
-            <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Happy Cat" class="gif">
-            <button onclick="location.reload()">Replay Surprise</button>
-        </div>
+<body>
+    <div class="bg-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
+
+    <main class="container">
+        <div class="glass-card">
+            <div class="icon-container">
+                <div class="premium-heart">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 28.5C16 28.5 2 20.5 2 11.5C2 6.5 6 3.5 10 3.5C12.5 3.5 14.5 4.5 16 6.5C17.5 4.5 19.5 3.5 22 3.5C26 3.5 30 6.5 30 11.5C30 20.5 16 28.5 16 28.5Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div id="main-content">
+                <h1 id="question">Will you be my Valentine?</h1>
+                <p id="subtext">A special question for a special person. ✨</p>
+
+                <div class="buttons">
+                    <button id="yes-btn" class="btn-primary">Yes, I'd love to! 🥰</button>
+                    <button id="no-btn" class="btn-secondary">No 😢</button>
+                </div>
+            </div>
+
+            <div id="hidden-message" class="hidden">
+                <h1 class="success-title">Yay!!! ❤️</h1>
+                <p class="success-subtitle">I'm the luckiest person in the world!</p>
+                <div class="gif-container">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG54NXA0bmN4NXA0bmN4NXA0bmN4NXA0bmN4NXA0bmN4NXA0JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/26BRv0ThflsHCqDrG/giphy.gif"
+                        alt="Happy Cat" class="gif">
+                </div>
+                <button class="btn-text" onclick="location.reload()">Replay Surprise</button>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>
