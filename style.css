@@ -1,0 +1,160 @@
+body {
+    background: #ffe6e6;
+    /* Light pink background */
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    color: #d63384;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Pacifico', cursive;
+}
+
+#yes-btn {
+    background-color: #ff4757;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+}
+
+#yes-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff6b81;
+}
+
+#no-btn {
+    background-color: #dfe4ea;
+    color: #2f3542;
+    position: relative;
+    /* Crucial for moving it around */
+}
+
+/* Floating Heart Animation */
+.heart-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float 3s ease-in-out infinite;
+}
+
+.heart {
+    background-color: #ff4757;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: #ff4757;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+}
+
+.heart:before {
+    top: -15px;
+    left: 0;
+}
+
+.heart:after {
+    left: 15px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, 0px);
+    }
+
+    50% {
+        transform: translate(-50%, -20px);
+    }
+
+    100% {
+        transform: translate(-50%, 0px);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Response styles */
+#hidden-message img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        /* Smaller text for phones */
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 2rem;
+        width: 85%;
+        /* Slightly more width on mobile */
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
