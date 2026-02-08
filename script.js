@@ -133,7 +133,7 @@ function sendEmail() {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            message: "She said YES! 💍💖",
+            message: "Mirembe Joy said YES! 💍💖",
             date: new Date().toLocaleString()
         })
     })
